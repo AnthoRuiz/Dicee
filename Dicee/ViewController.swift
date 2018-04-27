@@ -17,8 +17,8 @@ class ViewController: UIViewController {
    @IBAction func rollButton(_ sender: UIButton) {
       randomDice1 = Int(arc4random_uniform(6))
       randomDice2 = Int(arc4random_uniform(6))
-      print(randomDice1)
-      
+      diceImageView1.image = UIImage(named: "dice" + String(randomDice1+1))
+      diceImageView2.image = UIImage(named: "dice" + String(randomDice2+1))
    }
    
    
