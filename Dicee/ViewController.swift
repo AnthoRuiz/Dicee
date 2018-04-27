@@ -9,7 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+   
+   var randomDice1 : Int = 0
+   var randomDice2 : Int = 0
+   
 
+   @IBAction func rollButton(_ sender: UIButton) {
+      randomDice1 = Int(arc4random_uniform(6))
+      randomDice2 = Int(arc4random_uniform(6))
+      print(randomDice1)
+      
+   }
+   
+   
+   @IBOutlet weak var diceImageView1: UIImageView!
+   @IBOutlet weak var diceImageView2: UIImageView!
+   
+   
    override func viewDidLoad() {
       super.viewDidLoad()
       // Do any additional setup after loading the view, typically from a nib.
